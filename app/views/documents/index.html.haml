@@ -1,0 +1,4 @@
+- @documents.each do |document|
+  %h2= link_to document.title, document
+  %p= truncate(document.content, lenght: 50)
+  %p= time_ago_in_words(document.created_at)
