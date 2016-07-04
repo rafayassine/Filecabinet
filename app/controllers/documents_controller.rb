@@ -6,7 +6,7 @@ class DocumentsController < ApplicationController
   end
 
   def create
-    @document = Document.new(doc_params)
+    @document = @document = current_user.documents.build(doc_params)
     if @document.save
       redirect_to @document
     else
@@ -15,7 +15,7 @@ class DocumentsController < ApplicationController
   end
 
   def new
-    @document = Document.new
+    @document = current_user.documents.build
   end
 
   def edit
