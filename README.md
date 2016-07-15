@@ -9,6 +9,6 @@ Some of the gems I used :
 * simple_form
 * haml
 * pg
-* rails_12factor
+* rails12factor
 
 You can find a live app [here](https://blooming-meadow-50584.herokuapp.com/).
