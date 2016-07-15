@@ -1,5 +1,5 @@
 # File Cabinet
----
+
 This is a simple clone of Evernote where the user can log in,
 take some notes, save them and view them.
 This app is written using Rails, Haml, Html and Sass.
