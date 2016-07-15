@@ -1,6 +1,15 @@
-- @documents.each do |document|
-  %h2= link_to document.title, document
-  %p= time_ago_in_words(document.created_at)
-  %p= truncate(document.content, length: 100)
+.wrapper_with_padding
+  #docs.clearfix
+    - unless @documents.blank?
+      - @documents.each do |document|
+        %a{ href: (url_for [document])}
+          .doc
+            %p.title= document.title
+            %p.date= time_ago_in_words(document.created_at)
+            %p.content= truncate(document.content, length: 100)
+    - else
+      %h2 Create a document
+      %p Start Creating Documents and organize your taughts !
+      %button= link_to "Create Document", new_document_path
 
 = link_to "Create Document", new_document_path
